@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <script>
+        fnMyFunction()
+        function fnMyFunction() {
+            var apple = 5
+            console.log(apple)
+        }
+        // console.log(apple)
+        // Uncaught ReferenceError: apple is not defined
+
+        var apple2 = 3
+        if(true) {
+            var apple2 = 5
+            console.log(apple2)
+        }
+        console.log(apple2)
+
+        let apple3 = 3
+        if(true) {
+            let apple3 = 5
+            console.log(apple3)
+        }
+        console.log(apple3)
+
+        {
+            let apple4 = 3
+            console.log(apple4)
+            apple4 = 5
+            // let apple4 = 7
+            // Uncaught SyntaxError: Identifier 'apple4' has already been declared
+
+            // const car
+            // Uncaught SyntaxError: Missing initializer in const declaration
+            const carName = "hybrid"
+            console.log(carName)
+            // carName = "diesel"
+            // Uncaught TypeError: Assignment to constant variable.
+        }
+        // console.log(carName)
+        // Uncaught ReferenceError: carName is not defined
+    </script>
+</body>
+</html>
