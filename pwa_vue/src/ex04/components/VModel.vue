@@ -8,7 +8,7 @@
   
 <script>
 export default {
-name: 'vModel',
+name: 'VModel',
 data() {
     return {
         sMsg: '안녕하세요~!',

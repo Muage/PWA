@@ -7,7 +7,7 @@
 
 <script>
 export default {
-  name: 'vBind',
+  name: 'VBind',
   data() {
     return {
       sDate: '올해 연도: ' + new Date().getFullYear(),
