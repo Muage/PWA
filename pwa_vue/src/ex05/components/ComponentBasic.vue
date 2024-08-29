@@ -1,8 +1,12 @@
 <template>
-    <div id="main">
+    <div id="app">
         <h1>{{ sTitle }}</h1>
-        <FavoriteFruits></FavoriteFruits>
-        <FavoriteFruits></FavoriteFruits>
+        <ol>
+            <FavoriteFruits
+                v-for="item in aFruits"
+                :key="item.id"
+                :fruit="item" />
+        </ol>
     </div>
 </template>
 
@@ -11,13 +15,18 @@ import FavoriteFruits from './FavoriteFruits.vue'
 
 export default {
     name: 'ComponentBasic',
-    data() {
-        return {
-            sTitle: '안녕하세요!'
-        }
-    },
     components: {
         FavoriteFruits
+    },
+    data() {
+        return {
+            sTitle: '좋아하는 과일!',
+            aFruits: [
+                { id: 0, text: '사과' },
+                { id: 1, text: '오렌지' },
+                { id: 2, text: '수박' },
+            ],
+        }
     },
 }
 </script>
